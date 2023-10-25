@@ -1,0 +1,37 @@
+
+  Am obtinut 100 puncte in total si 20 pentru valgrind.
+  In implementare am definit cate o structura pentru noduri, pentru lista,
+pentru coada, pentru nodurile din stiva si in final pentru stiva.
+  Am realizat functii pentru crearea stivelor, pentru adaugarea elementelor in
+stive si pentru extragerea acestora. Apoi am creat o functie pentru eliberarea
+memoriei ocupate de o stiva. In continuare am facut functii pentru crearea 
+cozii de comenzi, pentru adaugarea elementelor in aceasta, pentru extragerea 
+din coada si pentru eliberarea memoriei ocupate de coada, apoi am facut functii 
+pentru crearea listei si eliberarea memoriei ocupate de aceasta.
+  Urmatoarele functii sunt legate de operatiile care se pot face asupra listei.
+Am creat functii pentru MOVE_LEFT, MOVE_RIGHT, unde am adaugat adresele
+elementelor curente in stiva de UNDO pentru operatiile de tip UNDO. In 
+continuare apare functia de WRITE, in care am dat valorea respectiva 
+elementului curent. Am realizat si functiile pentru MOVE_RIGHT_CHAR si 
+MOVE_LEFT_CHAR, iar in continuarea acestora cele pentru INSERT_RIGHT si 
+INSERT_LEFT. Ultimele functii pentru operatiile pe lista sunt cele de 
+SHOW_CURRENT si SHOW, ce nu modifica in vreun fel lista, ci doar afiseaza 
+elementul curent, respectiv intreaga lista.
+  In main am creat lista, coada, stivele de UNDO, respectiv REDO. Am declarat
+un element curent de tip Nod* pentru a retine elementul curent in cazul in care
+in functia MOVE_LEFT_CHAR se ajungea la inceputul listei fara a gasi elementul 
+cu valoarea cautata. Am deschis fisierul de intrare, apoi pe cel de iesire. Am
+citit numarul de operatii, iar apoi cerintele. In cazul in care cerintele erau 
+altele decat EXECUTE, SHOW, SHOW_CURRENT, UNDO, REDO le adaugam in coada de 
+comenzi. Daca cerinta era EXECUTE, extrageam in variabila rez prima cerinta din
+coada si verificam ce tip de operatie este, urmand sa fie executata. Daca 
+comenzile erau SHOW_CURRENT, SHOW, UNDO sau REDO, le executam direct. Pentru o 
+comanda de tip UNDO adaugam in stiva de REDO adresa elementului curent, iar 
+elementul curent primea prima adresa extrasa din stiva de UNDO. Pentru o 
+comanda de tip REDO adaugam in stiva de UNDO adresa elementului curent, iar
+elementul curent primea prima adresa extrasa din stiva de REDO. 
+  In final am inchis fisierele de intrare si iesire, iar apoi am eliberat 
+memoria ocupata de lista, coada si cele doua stive de UNDO si REDO.   
+
+
+     
