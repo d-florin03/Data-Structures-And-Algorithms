@@ -1,0 +1,30 @@
+
+     In implementarea temei am realizat anumite structuri pentru a reprezenta
+nodurile, graful si muchiile. Am facut o functie pentru a gasi indexul 
+unui nod in graf. Cand se citeau muchiile, nodurile erau date ca siruri de 
+caractere, astfel a trebuit sa le pun in ordine, fiecare avand cate un index al 
+pozitiei. Apoi am facut functiile de creare a unui nod si de creare a grafului.
+In continuare am realizat doua functii de adaugare a muchiilor in graf, cate 
+una pentru fiecare din cele 2 cerinte. Urmeaza functia cu ajutorul careia se 
+rezolva cerinta a doua si anume functia in care am implementat algoritmul lui
+Dijkstra. Am calculat in interiorul acesteia drumul de cost minim dintre Insula
+si Corabie. In functia urmatoare am implementat algoritmul DFS, de care m-am 
+folosit pentru a determina numarul de componente conexe la cerinta 1 si pentru 
+a verifica daca exista drum de la insula la corabie si de la corabie la insula,
+pentru a doua cerinta. Pentru cele mentionate anterior am facut cate o functie.
+Ultimele doua functii sunt functiile in care am realizat sortarea in ordine crescatoare a unui vector si eliberarea memoriei ocupata de graf. 
+     In main am deschis fisierele de intrare si de iesire, am luat din cerinta
+din primul argument din linia de comanda, si apoi le rezolvam separat pe 
+fiecare. Pentru prima cerinta am citit numarul de noduri si numarul de muchii, 
+dupa care cream graful, vectorul de muchii si lista de adiacenta. La final 
+adaugam muchiile in graf, inchideam fisierul de iesire si calculam numarul de
+componente conexe, apoi sortam vectorul in care am retinut costul minim pentru
+fiecare componenta conexa. Pentru cerinta a doua, citeam la fel numarul de 
+noduri si numarul de muchii, cream graful, vectorul de muchii si lista de 
+adiacenta si adaugam muchiile in graf. Am citit adancimile fiecarui nod, si le
+atribuiam fiecarui nod din graf. In final verificam daca exista drum de la 
+insula la corabie si invers si determinam cu ajutorul functiei dijkstra ce 
+trebuia sa afisez, si anume drumul echipajului, greutatea maxima pe care o 
+poate cara echipajul intr-un drum, si numarul de drumuri pe care trebuie sa il 
+faca acestia, apoi eliberam memoria ocupata. 
+
