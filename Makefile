@@ -1,14 +1,24 @@
+# Numele executabilului va fi temaX, unde X este numărul temei
+EXECUTABLE = quadtree
 
-all: tema1
+# Lista fișierelor sursă
+SOURCE_FILES = main.c
 
-tema1: bmagic.o
-	gcc -Wall -g -o tema1 bmagic.o
+# Opțiuni de compilare
 
-bmagic.o: bmagic.c
-	gcc -Wall -g -c bmagic.c
+.PHONY: all build run clean
 
-run: tema1
-	./tema1
+# Regula implicită
+all: build
 
+# Regula pentru compilare
+build:
+	gcc  main.c  -o $(EXECUTABLE)
+
+# Regula pentru rulare
+run:
+	./$(EXECUTABLE)
+
+# Regula pentru ștergerea executabilului
 clean:
-	rm -f *.o tema1
+	rm -f $(EXECUTABLE)
